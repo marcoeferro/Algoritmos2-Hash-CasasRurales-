@@ -22,7 +22,7 @@ public class App {
             
             switch(rta){
                 case 1:
-                    CasaRural casaInsertar = new CasaRural();
+                    CasaRural casaInsertar = new CasaRural(true);
                     tablaHash.insertar(casaInsertar);
                     break;
                 case 2:
@@ -34,8 +34,13 @@ public class App {
                     CasaRural casaMostrar = new CasaRural();
                     System.out.print("Ingrese la clave de la casa que desea Buscar \n");
                     clave=input.nextLine();
-                    casaMostrar = tablaHash.buscar(clave);
-                    casaMostrar.muestra();
+                    if(tablaHash.buscar(clave)!=null){
+                        casaMostrar = tablaHash.buscar(clave);
+                        casaMostrar.muestra();
+                    }else{
+                        System.out.print("\n La casa No Existe \n");
+                    }
+                       
                     break;
                 case 0 :
                     condicion = 0;

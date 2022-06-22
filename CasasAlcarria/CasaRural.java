@@ -13,6 +13,15 @@ public class CasaRural
 public CasaRural() 
 { 
     esAlta = true;
+    this.codigo=null;
+    this.poblacion=null;
+    this.direccion=null;
+    this.numHabitacion=0;
+    this.precio=0.0;
+}
+public CasaRural(boolean verdad) 
+{ 
+    esAlta = true;
     asigna();
 }
 //metodo que le permite al usuario asignar los valores de los atributos de clase
